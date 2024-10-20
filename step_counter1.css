@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #0c0101;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 10px;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    padding: 10px;
+  }
+  .nav-links a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #bab8b8;
+    border-radius: 5px;
+  }
+  
+  
+  h1 {
+    color: #ffcc00;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  /* Containers and spacing */
+  .login-container, #stepCounter, table {
+    width: 100%;
+    max-width: 400px;
+    background: #2c2c2c;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    border: 2px solid #ffcc00;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Login Container */
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .login-container input:focus {
+    border-color: #ff6600;
+    outline: none;
+    background-color: #444;
+  }
+  
+  button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #cc5200;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+  }
+  
+  button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  /* Step Counter Section */
+  #stepCounter h2 {
+    color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  #currentSteps {
+    font-weight: bold;
+    color: #ff6600;
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  /* Leaderboard Table Styles */
+  table {
+    width: 100%;
+    background-color: #333;
+    border-collapse: collapse;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 25px;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    color: #ffcc00;
+  }
+  
+  th {
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #3d3d3d;
+  }
+  
+  tbody tr:hover {
+    background-color: #ffcc00;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  td {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  
+  /* Hover Effects */
+  button:hover {
+    transform: translateY(-3px);
+  }
+  
+  input:hover, input:focus {
+    border-color: #ff6600;
+    background-color: #444;
+  }
+  
+  /* Animation for leaderboard display */
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-container, #stepCounter, table {
+        width: 100%;
+    }
+  
+    button {
+        width: 100%;
+    }
+  
+    table {
+        width: 100%;
+    }
+  }
+  

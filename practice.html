@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+    <h1>Workout Tracker</h1>
+    <div id="exerciseContainer">
+        <!-- Exercise boxes will be generated here -->
+    </div>
+
+<div id="day1Stats">
+    <h2>Total Workout Time for Day 1: <span id="day1TotalTime">0 seconds</span></h2>
+    <h2>Total Calories Burned for Day 1: <span id="day1TotalCalories">0</span></h2>
+</div>
+<div id="day2Stats" style="display: none;">
+    <h2>Total Workout Time for Day 2: <span id="day2TotalTime">0 seconds</span></h2>
+    <h2>Total Calories Burned for Day 2: <span id="day2TotalCalories">0</span></h2>
+</div>
+
+
+    <div>
+        <h2>Total Workout Time: <span id="totalTime">0</span> seconds</h2>
+        <h2>Total Calories Burned: <span id="totalCalories">0</span></h2>
+        <button id="goToDay2" disabled>Go to Day 2</button>
+    </div>
+    <button id="goBackToDay1" disabled>Back to Day 1</button>
+
+    <script src="practice.js"></script>
+
+   
+</body>
+</html>
