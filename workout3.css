@@ -1,0 +1,307 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(backgroudworkout.jpg);
+    background-size: cover; /* Cover the entire background */
+    background-attachment: fixed; /* Fix the background image */
+    background-position: center; /* Center the background image */
+    color: rgb(238, 47, 47); /* Change text color for better visibility */
+}
+
+
+.normal{
+    color: white;
+    
+    justify-content: center;
+    text-align: center;
+}
+.normal:hover{
+    color: #e55347;
+    text-shadow: #ff6347;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 10px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    padding: 10px;
+}
+.nav-links a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #bab8b8;
+    border-radius: 5px;
+}
+
+/* Add this CSS for toggle button styling */
+.toggle-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    margin: 20px 0;
+    position: relative; /* Needed for positioning the indicator */
+}
+
+.toggle-btn {
+    background-color: #ddd; /* Light background */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0; /* Remove margin between buttons */
+    position: relative; /* For proper stacking context */
+    z-index: 1; /* Ensure buttons are above the indicator */
+    transition: color 0.3s; /* Only transition color */
+}
+
+/* First button styles */
+.toggle-btn:first-child {
+    border-top-left-radius: 25px; /* Rounded corner for the left button */
+    border-bottom-left-radius: 25px; /* Rounded corner for the left button */
+}
+
+/* Last button styles */
+.toggle-btn:last-child {
+    border-top-right-radius: 25px; /* Rounded corner for the right button */
+    border-bottom-right-radius: 25px; /* Rounded corner for the right button */
+}
+
+/* Active button styles */
+.toggle-btn.active {
+    background-color: #8d0f7c; /* Active color */
+    color: rgb(250, 248, 248); /* Active text color */
+}
+
+/* Hover effect */
+.toggle-btn:hover {
+    color: rgb(250, 248, 248); /* Change text color on hover */
+}
+
+/* Indicator for the active button */
+.toggle-indicator {
+    position: absolute;
+    bottom: 0; /* Align with bottom of buttons */
+    left: 0; /* Start from the left button */
+    width: 50%; /* Cover half of the container */
+    height: 100%; /* Cover full height */
+    background-color: #8d0f7c; /* Active color */
+    border-radius: 25px; /* Rounded corners */
+    transition: left 0.3s, border-radius 0.3s; /* Smooth transition for movement */
+    z-index: 0; /* Send the indicator behind the buttons */
+}
+
+/* Adjust border-radius based on the active button */
+.toggle-btn.active ~ .toggle-indicator {
+    left: 50%; /* Move to the right button when active */
+    border-radius: 0 25px 25px 0; /* Rounded corners for right button */
+}
+
+.toggle-btn:not(.active) ~ .toggle-indicator {
+    border-radius: 25px 0 0 25px; /* Rounded corners for left button */
+}
+
+/* Additional round effect for the middle transition */
+.toggle-btn:not(:last-child):not(.active) ~ .toggle-indicator {
+    border-radius: 25px 25px 0 0; /* Round the top edges of the indicator */
+}
+
+/* Existing styles below */
+
+
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+    
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #ffefd5;
+}
+
+.workout-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
+}
+
+.workout-box {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    width: 320px;
+    height: 500px;
+    text-align: center;
+   
+}
+
+.workout-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Image section */
+.image-placeholder {
+    height: 50%;
+    overflow: hidden;
+}
+
+.workout-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.workout-content {
+    padding: 20px;
+}
+
+.level {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.start-btn {
+    background-color: #ff6347; /* Bright orange background */
+    color: #fff; /* White text color */
+    border: none; /* Remove default borders */
+    padding: 12px 24px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.start-btn:hover {
+    background-color: #e55347; /* Darken button on hover */
+}
+
+.btncustomize{
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom:40px;
+
+}
+#selection{
+    padding:10px;
+    color: #4e1f1f;
+    background-color: #ffefd5;
+}
+
+/* Base styles for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    padding: 10px;
+}
+.nav-links a:hover {
+    background-color: #bab8b8;
+    border-radius: 5px;
+}
+
+/* Hamburger icon styling */
+.toggle-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+/* Mobile Sidenav Styles */
+@media (max-width: 600px) {
+    .nav-links {
+        position: fixed;
+        left: -100%; /* Hide the sidenav initially */
+        top: 0;
+        height: 100%;
+        width: 200px;
+        background-color: #111;
+        flex-direction: column;
+        justify-content: center;
+        transition: left 0.3s ease-in-out; /* Smooth transition for the sidenav */
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 20px 0; /* Add space between links */
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 10px 20px;
+        color: white;
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        left: 0; /* Show the sidenav when menu is open */
+    }
+
+    .toggle-menu {
+        display: block; /* Show hamburger icon on mobile */
+    }
+}
